@@ -9,7 +9,7 @@ public class RichestCustomersWelth {
             for (int j = 0; j < accounts[0].length; j++) {
                 curmax+=accounts[i][j];
             }
-            System.out.println(curmax);
+
             max=Math.max(max, curmax);
         }
         return max;
