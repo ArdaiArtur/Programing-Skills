@@ -10,6 +10,8 @@ public class MergStringAlternately {
             sb.append(word1.charAt(i));
             if(i<m)
             sb.append(word2.charAt(i));
+            if(i>n&&i>m)
+            break;
         }
         return sb.toString();
     }
