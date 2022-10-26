@@ -1,6 +1,5 @@
 package Day1II;
 
-import java.lang.annotation.Retention;
 
 /**
  * MonotonicArray
