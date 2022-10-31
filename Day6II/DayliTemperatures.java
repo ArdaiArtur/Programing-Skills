@@ -1,5 +1,7 @@
 package Day6II;
 
+import java.util.Stack;
+
 public class DayliTemperatures {
     public int[] dailyTemperatures(int[] temperatures) {
         int i=0,j=1;
@@ -30,4 +32,24 @@ public class DayliTemperatures {
         }
         return a;
     }
+
+    public int[] dailyTemperature(int[] temperatures)
+    {
+        Stack<Integer> st=new Stack<>();
+        int n=temperatures.length;
+        int []a=new int [n];
+
+        for (int i = n-1; i >=0; i--) {
+            while (!st.isEmpty()&&temperatures[i]>=temperatures[st.peek()]) {
+                st.pop();
+            }
+            if(!st.isEmpty())
+            {
+                a[i]=st.peek()-i;
+            }
+            st.add(i);
+        }
+        return a;
+    }
+
 }
